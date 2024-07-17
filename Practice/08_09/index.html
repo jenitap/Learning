@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice: Pass values between functions</title>
-    <script src="script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&amp;family=Work+Sans:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../assets/style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
-  <body>
-    <main></main>
+  <script src="script.js" type="module" defer></script>
+  <script type="module">
+    //export { Content_, Content1_ };
+    import { content } from "./script.js";
+    import { content1 } from "./script.js";
+    let el = document.querySelector("script");
+    el.scriptContent = content;
+    let el1 = document.querySelector("script");
+    el1.scriptContent1 = content1;
+    console.log("The script content is: ", el.scriptContent);
+    console.log("The script content1 is: ", el1.scriptContent1);
+  </script>
+</head>
+<body>
+  <header class="siteheader">
+    <div class="site-title">BackpackPacker</div>
+    <div class="site-description">All backpack packing, all the time.</div>
+  </header>
+  <main class=".maincontent">
+    <div class="page-header">
+      <h2 class="page-header__heading">A pack for every purpose</h2>
+      <p>
+        If you're carrying a heavy load, you can't find a better tool than a
+        backpack. Distributing the weight evenly across your shoulders, back,
+        and hips, the backpack lets you use the natural frame of your body to
+        literally <em>shoulder</em> the weight while your legs do the
+        carrying.
+      </p>
+    </div>
+  </main>
+    <footer class="sitefooter">
+      <p>
+        Demo project for JavaScript Essential Training, a LinkedIn Learning
+        course.
+      </p>
+    </footer>
   </body>
 </html>
