@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # General
 .DS_Store
 .AppleDouble
@@ -24,3 +25,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+=======
+.DS_Store
+node_modules
+.tmp
+npm-debug.log
+>>>>>>> 5ef02fe0cb974994c0475cfee907512f7d8a62bf
