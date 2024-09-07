@@ -15,7 +15,7 @@ codeuri = "/Users/206745102new/Documents/Ex_Files_Ethical_Hacking_JavaScript/jav
 runtime = "nodejs20.x"
 architecture = "x86_64"
 handler = "app.lambdaHandler"
-manifest_hash = ""
+manifest_hash = "01365fee3883cbba629215ae85fd4b34"
 packagetype = "Zip"
 functions = ["RollADiceFunction"]
 

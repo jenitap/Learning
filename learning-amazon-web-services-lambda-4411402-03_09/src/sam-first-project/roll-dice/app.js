@@ -12,7 +12,7 @@
  */
 
 
-function rollDice(sides) {
+function RollADice(sides) {
     const randomNumber = Math.floor(Math.random() * sides) + 1;
   
     return randomNumber;
@@ -23,7 +23,7 @@ function rollDice(sides) {
     module.exports.lambdaHandler = async (event) => {
     console.log('Roll Dice Run!');
   
-    const result = rollDice(6);
+    const result = RollADice(6);
   
     try {
       return {

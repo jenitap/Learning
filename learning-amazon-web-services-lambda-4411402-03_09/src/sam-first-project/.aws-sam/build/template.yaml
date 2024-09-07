@@ -33,12 +33,14 @@ Resources:
       CodeUri: RollADiceFunction
       Handler: app.lambdaHandler
       Runtime: nodejs20.x
+      Architectures:
+      - x86_64
     Events:
       RollADiceAPI:
         Type: Api
         Properties:
-          Method: get
           Path: /dice
+          Method: get
     Metadata:
       SamResourceId: RollADiceFunction
 Outputs:
@@ -57,4 +59,20 @@ Outputs:
     Value:
       Fn::GetAtt:
       - HelloWorldFunctionRole
+      - Arn
+  RollADiceApi:
+    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/dice/
+  RollADiceFunction:
+    Description: Roll Dice Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - RollADiceFunction
+      - Arn
+  RollADiceFunctionIamRole:
+    Description: Implicit IAM Role created for Hello World function
+    Value:
+      Fn::GetAtt:
+      - RollADiceFunctionRole
       - Arn

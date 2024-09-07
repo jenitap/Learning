@@ -1,10 +1,10 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
-Description: 'sam-first-project
+Description: "sam-first-project
 
   Sample SAM Template for sam-first-project
 
-  '
+  "
 Globals:
   Function:
     Timeout: 3
@@ -18,7 +18,7 @@ Resources:
       Handler: app.lambdaHandler
       Runtime: nodejs20.x
       Architectures:
-      - x86_64
+        - x86_64
       Events:
         HelloWorld:
           Type: Api
@@ -27,6 +27,24 @@ Resources:
             Method: get
     Metadata:
       SamResourceId: HelloWorldFunction
+
+  RollADiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: RollADiceFunction
+      Handler: app.lambdaHandler
+      Runtime: nodejs20.x
+      Architectures:
+        - x86_64
+      Events:
+        HelloWorld:
+          Type: Api
+          Properties:
+            Path: /dice
+            Method: get
+    Metadata:
+      SamResourceId: RollADiceFunction
+
 Outputs:
   HelloWorldApi:
     Description: API Gateway endpoint URL for Prod stage for Hello World function
@@ -36,11 +54,28 @@ Outputs:
     Description: Hello World Lambda Function ARN
     Value:
       Fn::GetAtt:
-      - HelloWorldFunction
-      - Arn
+        - HelloWorldFunction
+        - Arn
   HelloWorldFunctionIamRole:
     Description: Implicit IAM Role created for Hello World function
     Value:
       Fn::GetAtt:
-      - HelloWorldFunctionRole
-      - Arn
+        - HelloWorldFunctionRole
+        - Arn
+
+  RollADiceApi:
+    Description: API Gateway endpoint URL for Prod stage for Roll Dice function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/dice/
+  RollADiceFunction:
+    Description: Roll Dice Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+        - RollADiceFunction
+        - Arn
+  RollADiceFunctionIamRole:
+    Description: Implicit IAM Role created for Roll Dice function
+    Value:
+      Fn::GetAtt:
+        - RollADiceFunctionRole
+        - Arn
