@@ -61,7 +61,7 @@ Outputs:
       - HelloWorldFunctionRole
       - Arn
   RollADiceApi:
-    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Description: API Gateway endpoint URL for Prod stage for Roll Dice function
     Value:
       Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/dice/
   RollADiceFunction:
@@ -71,7 +71,7 @@ Outputs:
       - RollADiceFunction
       - Arn
   RollADiceFunctionIamRole:
-    Description: Implicit IAM Role created for Hello World function
+    Description: Implicit IAM Role created for Roll Dice function
     Value:
       Fn::GetAtt:
       - RollADiceFunctionRole

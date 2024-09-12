@@ -59,11 +59,11 @@ Outputs:
     Value: !GetAtt HelloWorldFunctionRole.Arn
 
   RollADiceApi:
-    Description: API Gateway endpoint URL for Prod stage for Hello World function
+    Description: API Gateway endpoint URL for Prod stage for Roll Dice function
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/dice/"
   RollADiceFunction:
     Description: Roll Dice Lambda Function ARN
     Value: !GetAtt RollADiceFunction.Arn
   RollADiceFunctionIamRole:
-    Description: Implicit IAM Role created for Hello World function
+    Description: Implicit IAM Role created for Roll Dice function
     Value: !GetAtt RollADiceFunctionRole.Arn
