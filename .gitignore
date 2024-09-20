@@ -1,5 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+=======
+>>>>>>> 604d03031852beada95b905df7ffa5eb8db849fe
 .DS_Store
 node_modules
 .tmp
 npm-debug.log
+<<<<<<< HEAD
 sam-first-project/.aws-sam/
+=======
+>>>>>>> 5ef02fe0cb974994c0475cfee907512f7d8a62bf
+>>>>>>> 604d03031852beada95b905df7ffa5eb8db849fe

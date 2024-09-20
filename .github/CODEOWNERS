@@ -1,3 +1,7 @@
 # Codeowners for these exercise files:
+<<<<<<< HEAD
 # * (asterisk) denotes "all files and folders"
+=======
+# * (asterisk) deotes "all files and folders"
+>>>>>>> 604d03031852beada95b905df7ffa5eb8db849fe
 # Example: * @producer @instructor
